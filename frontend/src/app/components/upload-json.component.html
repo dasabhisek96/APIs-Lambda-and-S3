@@ -1,0 +1,11 @@
+<div>
+    <h2>Upload JSON</h2>
+    <textarea [(ngModel)]="jsonData" rows="6" cols="50"></textarea><br>
+    <button (click)="onSubmit()">Upload</button>
+    <div *ngIf="result">
+      <h3>Upload Successful</h3>
+      <p>ETag: {{ result.e_tag }}</p>
+      <p>URL: <a [href]="result.url" target="_blank">{{ result.url }}</a></p>
+    </div>
+  </div>
+  
